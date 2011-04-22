@@ -45,27 +45,3 @@
 			?>
 		</div>	
 	</div>
-	<div class="column_4 last">
-		<? 
-			$user->output('member_info');
-			
-		?>	
-
-			<ul id="navigator">
-				<li class="dashboard_navigator"><a href="<? $POD->siteRoot(); ?>">New Stuff</a></li>
-				<li class="dashboard_navigator dashboard_navigator_last dashboard_active"><a rel="external" href="<? $POD->siteRoot(); ?>/replies">Activity</a></li>
-				<? if ($POD->libOptions('enable_core_groups')) { 
-					$groups->output('group_navigator',null,null); 
-					?>
-					<li class="group_navigator"><a rel="external" href="<? $POD->siteRoot(); ?>/groups">More Groups...</a></li>
-					<?						
-				} ?>
-			</ul>					
-
-			<? //kill sidebar for mobile version $POD->output('sidebars/activity_stream'); ?>
-
-
-	</div>
-
-
-	<div class="clearer"></div>
