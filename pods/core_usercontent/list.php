@@ -30,17 +30,6 @@
 
 	<div class="column_8">
 		<? $docs->output('short','header','pager','What\'s New?','Nothing has been posted on this site yet. Wow, it must be brand new!'); ?>
-	</div>	
-	<div class="column_4 structure_only">
-		
-		<? $POD->output('sidebars/search'); ?>
-
-		<? $POD->output('sidebars/ad_unit'); ?>
-
-		<? $POD->output('sidebars/tag_cloud'); ?>
-
-		<? $POD->output('sidebars/recent_visitors'); ?>
-		
-	</div>	
+	</div>		
 
 <?	$POD->footer(); ?>

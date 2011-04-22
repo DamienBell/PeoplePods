@@ -199,6 +199,9 @@
 		// <a href="#toggleFlag" data-flag="flagname" data-active="active state text" data-inactive="inactive state text" data-content="id of content to flag" data-person="id of person to flag" data-group="id of group to flag" data-comment="id of comment to flag" data-file="id of file to flag">Link Text</a>	
 		$('a[href="#toggleFlag"]').live('click',function() {
 			var command = '';
+                        var org_width= $(this).width();
+                        var org_height= $(this).height();
+
 			var flag = $(this).attr('data-flag');
 			var on_state = $(this).attr('data-active');
 			var off_state =$(this).attr('data-inactive');
@@ -209,7 +212,10 @@
 				$(this).addClass('active');
 				$(this).html(on_state);
 			}
-	
+
+                        $(this).width(org_width);
+                        $(this).height(org_height);
+                        
 			if ($(this).attr('data-content')) {
 				command = '/content.toggleFlag?flag='+flag+'&content='+$(this).attr('data-content');
 			} else if ($(this).attr('data-person')) {

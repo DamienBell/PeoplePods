@@ -22,6 +22,9 @@
                 <div class="one_third" id="login_status">
                      <ul data-role="listview">
                         <li><a href="<? $POD->siteRoot(); ?>">Home</a></li>
+                        <?if ($POD->libOptions('enable_core_dashboard') && $POD->isAuthenticated()){ ?>
+                            <li><a href="<? $POD->siteRoot();?>/replies">Replies</a></li>
+                        <? } ?>
                         <? if ($POD->libOptions('enable_contenttype_document_list')) { ?><li><a href="<? $POD->siteRoot(); ?>/show">What's New?</a></li><? } ?>
                          <? if ($POD->libOptions('enable_core_groups')) { ?><li><a href="<? $POD->siteRoot(); ?>/groups" >Groups</a></li><? } ?>
                         <? if ($POD->isAuthenticated()) { ?>

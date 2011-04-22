@@ -16,7 +16,7 @@
 					<span class="content_meta">
 						<span class="content_author"><? $doc->author()->permalink(); ?></span> posted (<span class="content_time"><? echo $doc->write('timesince'); ?></span>)
 					</span>
-					<h1><a href="<? $doc->write('permalink'); ?>" title="<? $doc->write('headline'); ?>"><? $doc->write('headline'); ?></a></h1>
+					<h1><a href="<? $doc->write('permalink'); ?>" title="<? $doc->write('headline'); ?>" rel="external"><? $doc->write('headline'); ?></a></h1>
 				</header>
 				
 				<? if ($doc->get('video')) {
@@ -44,7 +44,7 @@
 
 				<ul class="content_options">
 					<li class="comments_option">
-						<a href="<? $doc->write('permalink'); ?>"><?  if ($doc->comments()->totalCount() > 0) {  echo $doc->comments()->totalCount() . " comments"; } else { echo "No comments"; } ?></a>
+						<a href="<? $doc->write('permalink'); ?>" rel="external"><?  if ($doc->comments()->totalCount() > 0) {  echo $doc->comments()->totalCount() . " comments"; } else { echo "No comments"; } ?></a>
 					</li>
 					<? if ($doc->POD->isAuthenticated()) { ?>
 						<li class="watching_option">

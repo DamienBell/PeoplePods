@@ -15,12 +15,11 @@
      <section id="" class="content" data-role="page">
             <div data-role="header" data-theme="b">
                 <a href="#main_nav" data-role="button"><h3>Nav menu</h3></a>
-                <h1><a href="<? $POD->siteRoot(); ?>" rel="external" ><? $POD->siteName(); ?></a></h1>
+                <h1><a class="mainpagelink" href="<? $POD->siteRoot(); ?>" rel="external" ><? $POD->siteName(); ?></a></h1>
             </div>
             <div data-role="fieldcontain">
                 <form method="get" action="<? $POD->siteRoot(); ?>/search">
-                    <label for="search">Search:</label>
-                    <input type="search" name="q" id="search" value="" />
+                    <input type="search" name="q" id="search" value="" placeholder="Search"/>
                 </form>
              </div>
             <div class="clearer"></div>

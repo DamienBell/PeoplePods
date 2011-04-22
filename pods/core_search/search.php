@@ -39,7 +39,7 @@
 				<form method="get" action="<? $POD->siteRoot(); ?>/search">
 				<p>
 					<label for="q">Search:</label>
-					<input name="q" id="q" value="<?= htmlspecialchars(@$_GET['q']); ?>" />
+					<input type="search" placeholder="Search" name="q" id="q" value="<?= htmlspecialchars(@$_GET['q']); ?>" />
 					<input type="submit" class="button" value="Search" />
 				</p>
 			</form>	

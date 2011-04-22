@@ -14,7 +14,7 @@
 /**********************************************/
 ?>
 <section id="editform">
-    <div data-role="collapsible" data-collapsed="true">
+    <div data-role="collapsible" data-collapsed="false">
         <h3>Create Something</h3>
 	<form class="valid" action="<? $doc->write('editpath'); ?>" method="post" id="post_something"  enctype="multipart/form-data">
 		<? if ($doc->get('id')) { ?>
@@ -33,9 +33,10 @@
 				<li class="post_option" >
 					<a href="#" id="add_body"onclick="return togglePostOption('body');">+ More</a>
 				</li>
+                                <!--
 				<li class="post_option" >
 					<a href="#" id="add_photo" onclick="return togglePostOption('photo');">+ Image</a>
-				</li>				
+				</li>-->
 				<li class="post_option" >
 					<a href="#" id="add_video" onclick="return togglePostOption('video');">+ Video</a>
 				</li>
