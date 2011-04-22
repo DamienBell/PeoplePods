@@ -66,16 +66,6 @@
 				 ?>		
 		<? } ?>
 	</div>
-	
-	<div class="column_4 structure_only">
-		
-		<? $POD->output('sidebars/ad_unit'); ?>
-
-		<? $POD->output('sidebars/tag_cloud'); ?>
-
-		<? $POD->output('sidebars/recent_visitors'); ?>
-		
-	</div>	
 
 	<? $POD->footer(); ?>
 

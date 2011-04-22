@@ -17,10 +17,8 @@
         <section>
             <div id="siteName" data-role="header" data-theme="b">
                 <h1><a href="<? $POD->siteRoot(); ?>" rel="external"><? $POD->siteName(); ?></a></h1>
-
             </div>
             <div id="header_menu" data-role="content">
-
                 <div class="one_third" id="login_status">
                      <ul data-role="listview">
                         <li><a href="<? $POD->siteRoot(); ?>">Home</a></li>
@@ -35,39 +33,25 @@
 			<? } else { ?>
                         <li><a href="<? $POD->siteRoot(); ?>/login" rel="external">Login</a></li>
 			<? } ?>
-                    </ul>
-                </div>
-	</section>
-
-			<!-- begin main navigation -->
-
-            <nav>
-                <div>
-                    <ul data-role="listview">
-         
-                           
-                            <? if ($POD->isAuthenticated()) { ?>
+                        <? if ($POD->isAuthenticated()) { ?>
                             <? if ($POD->currentUser()->get('adminUser')) { ?>
                                 <li><a href="<? $POD->podRoot(); ?>/admin" rel="external">Command Center</a></li>
                             <? } ?>
-                            <? } else { ?>
+                        <? } else { ?>
                                 <? if ($POD->libOptions('enable_core_authentication_creation')) {?><li><a href="<? $POD->siteRoot(); ?>/join">Join</a></li><? } ?>
                             <? } ?>
-                            <div class="clearer"></div>
-                   </ul>
+                    </ul>
                 </div>
-                </nav>
-                    <? if ($POD->isEnabled('core_search')) { ?>
-                        <form method="get" action="<? $POD->siteRoot(); ?>/search">
-                            <div data-role="fieldcontain">
-                                
-                                <input type="search" name="q" id="search" size="12" class="repairField" default="this site" />
-                                <label for="">Search</label>
-                            </div>
-                        </form>
-                    <? } ?>
-
-                            <!-- end main navigation -->
-          </div>
-                 <div data-role="footer" data-theme="b"></div>
+             </div>
+	</section>
+                
+        <div data-role="footer" data-theme="b" data-id="nav_foot">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="<? $POD->siteRoot(); ?>">Dashboard</a></li>
+                    <li><a href="<? $POD->currentUser()->write('permalink');?>" >Profile</a></li>
+                    <li><a href="<? $POD->siteRoot(); ?>/search" >Search</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
