@@ -13,7 +13,7 @@
 /**********************************************/
 ?>
      <section id="" class="content" data-role="page">
-            <div data-role="header" data-theme="b">
+            <div data-role="header" data-theme="b" data-position="fixed">
                 <a href="#main_nav" data-role="button"><h3>Nav menu</h3></a>
                 <h1><a class="mainpagelink" href="<? $POD->siteRoot(); ?>" rel="external" ><? $POD->siteName(); ?></a></h1>
             </div>

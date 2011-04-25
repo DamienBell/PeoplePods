@@ -31,9 +31,7 @@
 							<a href="<? $user->POD->siteRoot(); ?><? echo $user->POD->libOptions('messagePath') ?>/<? $user->write('stub'); ?>" data-role="button" rel="external" class="person_output_send_message_button">Send Message</a>
 						<? } ?>
 
-					<? } else { ?>
-						<a data-role="button" rel="external" href="<? $user->POD->siteRoot(); ?>/editprofile" title="Edit My Profile" class="person_output_edit_profile_button">Edit My Profile</a>
-					<? } ?>
+					<? }  ?>
 				<? } else { ?>
 					<div id="addFriend<? $user->write('id'); ?>"><a href="<? $user->POD->siteRoot(); ?>/join" data-role="button" rel="external"class="person_output_follow_button person_output_follow_button_start">Join up to follow <? $user->write('nick'); ?></a></div>
 				<? } ?>
