@@ -50,7 +50,8 @@
 					<? $doc->tags()->output('tag',null,null); ?>
 				</p>
 			<? } ?>	
-	</article>	
+	</article>
+    <div class="clearer"></div>
 	<aside id="post_tools">
 				<? if ($POD->isAuthenticated()) {  ?>
                                 <div data-role="controlgroup" data-type="horizontal">
