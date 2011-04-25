@@ -15,7 +15,7 @@
    <div data-role="page" id="main_nav">
 			<!-- begin login status -->
         <section>
-            <div id="siteName" data-role="header" data-theme="b"data-position="fixed" >
+            <div id="siteName" data-role="header" data-theme="b" data-position="fixed" >
                 <h1><a href="<? $POD->siteRoot(); ?>" rel="external"><? $POD->siteName(); ?></a></h1>
             </div>
             <div id="header_menu" data-role="content">

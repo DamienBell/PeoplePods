@@ -13,7 +13,8 @@ footer,header,hgroup,menu,nav,section {
 /* Link Styles */	
 	
 	a { color: #336699; text-decoration: none; }
-	a:visited { color: #225588; } 
+
+	a:visited { color: #ffffff; }
 	a:hover {  }  
 
 	h1,h2,h3 { margin-top: 0px; margin-bottom: 10px;}

@@ -14,7 +14,7 @@
 /**********************************************/
 ?>
 <section id="editform">
-    <div data-role="collapsible" data-collapsed="false">
+    <div data-role="collapsible" data-collapsed="true">
         <h3>Create Something</h3>
 	<form class="valid" action="<? $doc->write('editpath'); ?>" method="post" id="post_something"  enctype="multipart/form-data">
 		<? if ($doc->get('id')) { ?>
