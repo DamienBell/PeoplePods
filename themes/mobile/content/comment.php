@@ -20,7 +20,7 @@
 			<? if ($comment->POD->isAuthenticated() && ($comment->parent('userId') == $comment->POD->currentUser()->get('id') || $comment->get('userId') == $comment->POD->currentUser()->get('id'))) { ?>
 				<span class="gray remove_comment"><a href="#deleteComment" data-ajax="false" data-comment="<? $comment->write('id'); ?>">Remove Comment</a></span>
 			<? } ?>
-			<span class="author"><? $comment->author()->write('nick'); ?></span> said, (<span class="post_time"><a href="#<? $comment->write('id'); ?> "><? echo $this->POD->timesince($comment->get('minutes')); ?></a></span>)
+			<span class="author"><? $comment->author()->write('nick'); ?></span> said, (<span class="post_time"><? echo $this->POD->timesince($comment->get('minutes')); ?></span>)
 			<a href="#reply" data-ajax="false" data-comment="<?= $comment->id; ?>" data-author="<?= htmlspecialchars($comment->author()->nick); ?>">Reply</a>
 		</span>
 		<? $comment->writeFormatted('comment') ?>
